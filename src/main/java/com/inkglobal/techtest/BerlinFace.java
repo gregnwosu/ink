@@ -10,18 +10,20 @@ import java.util.Arrays;
  * To change this template use File | Settings | File Templates.
  */
 public class BerlinFace implements Face {
+
+
     @Override
     public String render(final int hours, final int minutes, final int seconds) {
 
         final String s = renderSeconds(seconds);
         final String h = renderHours(hours);
         final String m = renderMinutes(minutes);
-        return String.valueOf(new StringBuilder("\n").append(s).append("\n").append(h).append("\n").append(m));
+        return s + h + m;
     }
 
     String renderSeconds(final int seconds) {
         final char[] topRow = renderDivRow(seconds, 1, 2, 'Y', 'O');
-        return "\n" + new String(topRow);
+        return new String(topRow);
     }
 
     String renderMinutes(final int minutes) {
@@ -50,7 +52,7 @@ public class BerlinFace implements Face {
     private char[] renderRow(final int index, final int length, final int base, final char init, final char fill) {
         final char[] row = new char[length];
         Arrays.fill(row, init);
-        Arrays.fill(row, 0, index % base, fill);
+        Arrays.fill(row, 0, index / base, fill);
         return row;
     }
 

@@ -25,9 +25,9 @@ public class BerlinFaceTest {
 
     @Test
     public void shouldRenderOddSecondsAsY() {
-        assertEquals("\nY", bf.renderSeconds(30));
-        assertEquals("\nO", bf.renderSeconds(31));
-        assertEquals("\nY", bf.renderSeconds(0));
+        assertEquals("Y", bf.renderSeconds(30));
+        assertEquals("O", bf.renderSeconds(31));
+        assertEquals("Y", bf.renderSeconds(0));
     }
 
 

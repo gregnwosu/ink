@@ -8,34 +8,32 @@
 package com.inkglobal.techtest;
 
 
-import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
-//NotThreadSafe
+
 public class Clock {
 
     private final Face r;
-    private final DateTimeFormatter parser;
-    private DateTime t;
+    private Scanner t;
+
 
     public Clock(Face r) {
         this.r = r;
-        this.parser = DateTimeFormat.forPattern("HH:mm:ss");
+
 
     }
 
     public void setInput(final String input) {
-        this.t = parse(input);
-    }
-
-    final DateTime parse(final String input) throws IllegalArgumentException {
-        return parser.parseDateTime(input);
+        this.t = new Scanner(input);
+        this.t.useDelimiter(":");
 
     }
 
 
     public final String display() {
-        return r.render(t.getHourOfDay(), t.getMinuteOfHour(), t.getSecondOfMinute());
+        final int hour = t.nextInt();
+        final int minute = t.nextInt();
+        final int second = t.nextInt();
+        return r.render(hour, minute, second);
     }
 }

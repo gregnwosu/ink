@@ -27,35 +27,35 @@ Test Cases (Y = Yellow, R = Red, O = Off)
 Given an input of 00:00:00
 When the berlinclock is displayed
 Then the result is
-            Y
-            OOOO
-            OOOO
-            OOOOOOOOOOO
-            OOOO
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+OOOO
 
 Given an input of 13:17:01
 When the berlinclock is displayed
 Then the result is
-            O
-            RROO
-            RRRO
-            YYROOOOOOOO
-            YYOO
+O
+RROO
+RRRO
+YYROOOOOOOO
+YYOO
 
 Given an input of 23:59:59
 When the berlinclock is displayed
 Then the result is
-            O
-            RRRR
-            RRRO
-            YYRYYRYYRYY
-            YYYY
+O
+RRRR
+RRRO
+YYRYYRYYRYY
+YYYY
 
 Given an input of 24:00:00
 When the berlinclock is displayed
 Then the result is
-            Y
-            RRRR
-            RRRR
-            OOOOOOOOOOO
-            OOOO
+Y
+RRRR
+RRRR
+OOOOOOOOOOO
+OOOO
