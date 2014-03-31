@@ -7,7 +7,7 @@ import java.util.Arrays;
  * User: greg
  * Date: 29/03/14
  * Time: 00:36
- * To change this template use File | Settings | File Templates.
+ * notes from java 5+ + concatentation of string uses stringbuilder.
  */
 public class BerlinFace implements Face {
 
