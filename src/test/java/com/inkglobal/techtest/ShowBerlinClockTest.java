@@ -16,7 +16,7 @@ import org.jbehave.core.steps.InstanceStepsFactory;
  * Time: 22:56
  * To change this template use File | Settings | File Templates.
  */
-public class ShowBerlinClock extends JUnitStory {
+public class ShowBerlinClockTest extends JUnitStory {
 
 
     @Override
